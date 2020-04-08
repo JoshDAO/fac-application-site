@@ -35,6 +35,23 @@ main {
     height: 50px;
     display: flex;
     align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.intro .introHeader .aboutMe {
+    height: 50px;
+    flex-basis: auto;
+}
+
+.intro .introHeader .externalLinks {
+    background-color: peachpuff;
+    height: 50px;
+    flex-basis: 50em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 
 }
 
