@@ -46,7 +46,7 @@ main {
 }
 
 .intro .introHeader .externalLinks {
-    background-color: peachpuff;
+    background-color: rosybrown;
     height: 50px;
     flex-basis: 50em;
     display: flex;
@@ -58,7 +58,26 @@ main {
 .intro .introMain {
     background-color: thistle;
     height: 450px;
+    display: flex;
 }
+
+.intro .introMain .selfText {
+    flex-basis: 50%;
+    height: fit-content;
+}
+.intro .introMain .carousel {
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel img {
+ 
+    height: 80%;
+}
+
 
 footer {
     width: 100%;
