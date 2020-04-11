@@ -73,10 +73,18 @@ main {
     align-items: center;
 }
 
-.carousel img {
+.introMain .carousel .mySlides {
  
     height: 80%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
+
+.introMain .carousel .mySlides img {
+    object-fit: contain;
+}
+
 
 
 footer {
