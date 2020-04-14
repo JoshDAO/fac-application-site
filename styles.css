@@ -79,6 +79,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;  
+    overflow: hidden;
 }
 
 .introMain .carouselArea .carouselContainer .mySlides {
