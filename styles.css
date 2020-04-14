@@ -59,30 +59,47 @@ main {
     background-color: thistle;
     height: 450px;
     display: flex;
+    align-items: center;
 }
 
 .intro .introMain .selfText {
     flex-basis: 50%;
     height: fit-content;
 }
-.intro .introMain .carousel {
+.intro .introMain .carouselArea {
     flex-basis: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.introMain .carousel .mySlides {
- 
-    height: 80%;
-    
+.intro .introMain .carouselArea .carouselContainer{
+    height: 360px;
+    width: 540px;
+    display: flex;
     justify-content: center;
-    width: 100%;
+    align-items: center;  
 }
 
-.introMain .carousel .mySlides img {
+.introMain .carouselArea .carouselContainer .mySlides {
     height: 100%;
+    width: 540px;
+    display: flex;
+}
+
+.introMain .carouselArea .carouselContainer .mySlides img {
+    height: 100%;
+    max-width: 100%;
+    
+}
+
+#img2 {
+    padding: 0 9.97px;
+    box-sizing: border-box;
+}
+
+#img3 {
+    padding: 0 90px;
 }
 
 
