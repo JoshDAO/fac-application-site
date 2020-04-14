@@ -30,7 +30,7 @@ main {
     font-family: sans-serif;
     flex-direction: column;
 }
-.intro .introHeader {
+.intro .intro-header {
     background-color: wheat;
     height: 50px;
     display: flex;
@@ -40,12 +40,12 @@ main {
 
 }
 
-.intro .introHeader .aboutMe {
+.intro .intro-header .about-me {
     height: 50px;
     flex-basis: auto;
 }
 
-.intro .introHeader .externalLinks {
+.intro .intro-header .external-links {
     background-color: rosybrown;
     height: 50px;
     flex-basis: 50em;
@@ -55,25 +55,25 @@ main {
 
 }
 
-.intro .introMain {
+.intro .intro-main {
     background-color: thistle;
     height: 450px;
     display: flex;
     align-items: center;
 }
 
-.intro .introMain .selfText {
+.intro .intro-main .self-text {
     flex-basis: 50%;
     height: fit-content;
 }
-.intro .introMain .carouselArea {
+.intro .intro-main .carousel-area {
     flex-basis: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.intro .introMain .carouselArea .carouselContainer{
+.intro .intro-main .carousel-area .carousel-container{
     height: 360px;
     width: 540px;
     display: flex;
@@ -82,13 +82,13 @@ main {
     overflow: hidden;
 }
 
-.introMain .carouselArea .carouselContainer .mySlides {
+.intro-main .carousel-area .carousel-container .my-slides {
     height: 100%;
     width: 540px;
     display: flex;
 }
 
-.introMain .carouselArea .carouselContainer .mySlides img {
+.intro-main .carousel-area .carousel-container .my-slides img {
     height: 100%;
     max-width: 100%;
     
