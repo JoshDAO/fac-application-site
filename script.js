@@ -51,6 +51,25 @@ const playPause = () => {
 button.addEventListener("click", playPause);
 button.addEventListener("click", changeText);
 
+//Add functionality to next image / previous image buttons
 
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+const forwardResetTimer = () => {
+    transitionSlideForward();
+    clearInterval(loopVar);
+    loopVar = setInterval(transitionSlideForward, 3000);
+}
+
+const backwardResetTimer = () => {
+    transitionSlideBackward();
+    clearInterval(loopVar);
+    loopVar = setInterval(transitionSlideForward, 3000);
+}
+
+
+nextBtn.addEventListener("click", forwardResetTimer);
+prevBtn.addEventListener("click", transitionSlideBackward);
 
 
