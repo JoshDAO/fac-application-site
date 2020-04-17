@@ -56,16 +56,20 @@ button.addEventListener("click", changeText);
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 
-const forwardResetTimer = () => {
+const forwardResetTimer = () => { // function to slide forward and reset auto loop
     transitionSlideForward();
-    clearInterval(loopVar);
-    loopVar = setInterval(transitionSlideForward, 3000);
+    if (button.innerText == "Pause"){
+        clearInterval(loopVar);
+        loopVar = setInterval(transitionSlideForward, 3000);
+}
 }
 
-const backwardResetTimer = () => {
+const backwardResetTimer = () => {//function to slide backward and reset auto loop
     transitionSlideBackward();
-    clearInterval(loopVar);
-    loopVar = setInterval(transitionSlideForward, 3000);
+    if (button.innerText == "Pause"){
+        clearInterval(loopVar);
+        loopVar = setInterval(transitionSlideForward, 3000);
+    }
 }
 
 
