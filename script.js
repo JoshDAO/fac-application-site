@@ -70,6 +70,6 @@ const backwardResetTimer = () => {
 
 
 nextBtn.addEventListener("click", forwardResetTimer);
-prevBtn.addEventListener("click", transitionSlideBackward);
+prevBtn.addEventListener("click", backwardResetTimer);
 
 
