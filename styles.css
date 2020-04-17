@@ -95,6 +95,10 @@ main {
     
 }
 
+#playpause{
+    width: 50px;
+}
+
 #img2 {
     padding: 0 9.97px;
     box-sizing: border-box;
