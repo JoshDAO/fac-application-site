@@ -79,7 +79,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;  
-    overflow: hidden;
+    overflow:hidden;
+    
 }
 
 .intro-main .carousel-area .carousel-container .my-slides {
