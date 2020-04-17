@@ -23,12 +23,12 @@ const transitionSlideBackward= () => {
 
 // automatic play function
 
-const autoLoop = () => {
-    setInterval(transitionSlideForward, 3000);
-  }
+//const autoLoop = () => {
+ //   setInterval(transitionSlideForward, 3000);
+ // }
 
 
-autoLoop();
+//autoLoop();
 
 //PlayPause button text change
 
@@ -42,6 +42,22 @@ const changeText = () => {
     }
 }
 
+//PlayPause button main function
+
+const loopVar = setInterval(transitionSlideForward, 3000);
+
+
+const playPause = () => {
+    if (button.innerText == "Play") {
+        setInterval(transitionSlideForward, 3000);
+    } else {
+        clearInterval(loopVar);
+    }
+}
+button.addEventListener("click", playPause);
+
 button.addEventListener("click", changeText);
+
+
 
 
