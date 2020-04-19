@@ -80,10 +80,15 @@ prevBtn.addEventListener("click", backwardResetTimer);
 
 // Clone image loop. Add event listener for end of transition
 
-carouselSlide.addEventListener("transitionend", () => {
+carouselSlide.addEventListener("transitionend", () => { // 
     if (images[counter].id == "last-clone") {
         carouselSlide.style.transition = 'none';
         counter = images.length - 2;
+        carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
+    }
+    if (images[counter].id == "first-clone") {
+        carouselSlide.style.transition = 'none';
+        counter = 1;
         carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
     }
 });
