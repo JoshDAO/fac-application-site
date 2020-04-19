@@ -3,8 +3,9 @@ const images = document.querySelectorAll(".my-slides img");
 console.log(images)
 
 // counter
-let counter = 0;
-const scrollWidth = images[0].clientWidth;
+let counter = 1;
+const scrollWidth = images[1].clientWidth;
+carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
 
 //transition slide functions
 const transitionSlideForward = () => { 
@@ -15,9 +16,19 @@ const transitionSlideForward = () => {
 }
 
 const transitionSlideBackward= () => { 
+    if (images[counter].id == "last-clone") { /////////
+        carouselSlide.style.transition = 'none';
+        counter = images.length - 2;
+        carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
+        carouselSlide.style.transition = "transform 0.6s ease-in-out";
+        counter--;
+        carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
+
+    } else {
     carouselSlide.style.transition = "transform 0.6s ease-in-out";
     counter--;
     carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
+    }
 
 }
 
@@ -61,7 +72,7 @@ const forwardResetTimer = () => { // function to slide forward and reset auto lo
     if (button.innerText == "PAUSE"){
         clearInterval(loopVar);
         loopVar = setInterval(transitionSlideForward, 3000);
-}
+    }
 }
 
 const backwardResetTimer = () => {//function to slide backward and reset auto loop
@@ -69,14 +80,23 @@ const backwardResetTimer = () => {//function to slide backward and reset auto lo
     if (button.innerText == "PAUSE"){
         clearInterval(loopVar);
         loopVar = setInterval(transitionSlideForward, 3000);
+        
     }
+    console.log(counter);
 }
-
-// Clone image loop.
-
-
-
 nextBtn.addEventListener("click", forwardResetTimer);
 prevBtn.addEventListener("click", backwardResetTimer);
 
 
+
+// Clone image loop.
+
+const firstCloneFunct = (counter) => {
+    if (counter === 0) {
+        // carouselSlide.style.transition = 'none';
+        console.log(counter);
+        // counter = images.length - 2;
+        // console.log(counter);
+        // carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
+    }
+}
