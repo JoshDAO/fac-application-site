@@ -72,6 +72,9 @@ const backwardResetTimer = () => {//function to slide backward and reset auto lo
     }
 }
 
+// Clone image loop.
+
+
 
 nextBtn.addEventListener("click", forwardResetTimer);
 prevBtn.addEventListener("click", backwardResetTimer);
