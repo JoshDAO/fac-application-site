@@ -16,20 +16,9 @@ const transitionSlideForward = () => {
 }
 
 const transitionSlideBackward= () => { 
-    if (images[counter].id == "last-clone") { /////////
-        carouselSlide.style.transition = 'none';
-        counter = images.length - 2;
-        carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
-        carouselSlide.style.transition = "transform 0.6s ease-in-out";
-        counter--;
-        carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
-
-    } else {
     carouselSlide.style.transition = "transform 0.6s ease-in-out";
     counter--;
     carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
-    }
-
 }
 
 
@@ -89,14 +78,12 @@ prevBtn.addEventListener("click", backwardResetTimer);
 
 
 
-// Clone image loop.
+// Clone image loop. Add event listener for end of transition
 
-const firstCloneFunct = (counter) => {
-    if (counter === 0) {
-        // carouselSlide.style.transition = 'none';
-        console.log(counter);
-        // counter = images.length - 2;
-        // console.log(counter);
-        // carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
+carouselSlide.addEventListener("transitionend", () => {
+    if (images[counter].id == "last-clone") {
+        carouselSlide.style.transition = 'none';
+        counter = images.length - 2;
+        carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
     }
-}
+});
