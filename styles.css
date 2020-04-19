@@ -95,10 +95,27 @@ main {
 }
 
 #playpause{
-    width: 50px;
+    display: inline-block;
     position: absolute;
+    left: 35%;
+    bottom: 5%;
     z-index: 10;
-    
+    width: 30%;
+    height: 10%;
+    font: ultra-expanded normal small-caps bold 20px 'Arial', sans-serif ;
+    font-weight: 900;
+    letter-spacing: 10px;
+    color: white;
+    opacity: 0.7;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+}
+
+#playpause:active{
+    border: none;
 }
 
 #prevBtn {

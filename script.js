@@ -27,10 +27,10 @@ const transitionSlideBackward= () => {
 const button = document.getElementById('playpause');
 
 const changeText = () => {
-    if (button.innerText === "Play") {
-        button.innerText = "Pause";
+    if (button.innerText === "PLAY") {
+        button.innerText = "PAUSE";
     } else {
-        button.innerText = "Play";
+        button.innerText = "PLAY";
     }
 }
 
@@ -40,7 +40,7 @@ let loopVar = setInterval(transitionSlideForward, 3000); // will play when page 
 
 
 const playPause = () => {
-    if (button.innerText == "Play") {
+    if (button.innerText == "PLAY") {
         loopVar = setInterval(transitionSlideForward, 3000);  // reassign loopVar to initial value when "Play" is pressed.
     } else {
         clearInterval(loopVar);                          // clear loopVar interval when "Pause" is pressed
@@ -58,7 +58,7 @@ const nextBtn = document.getElementById("nextBtn");
 
 const forwardResetTimer = () => { // function to slide forward and reset auto loop
     transitionSlideForward();
-    if (button.innerText == "Pause"){
+    if (button.innerText == "PAUSE"){
         clearInterval(loopVar);
         loopVar = setInterval(transitionSlideForward, 3000);
 }
@@ -66,7 +66,7 @@ const forwardResetTimer = () => { // function to slide forward and reset auto lo
 
 const backwardResetTimer = () => {//function to slide backward and reset auto loop
     transitionSlideBackward();
-    if (button.innerText == "Pause"){
+    if (button.innerText == "PAUSE"){
         clearInterval(loopVar);
         loopVar = setInterval(transitionSlideForward, 3000);
     }
