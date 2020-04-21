@@ -21,10 +21,28 @@ header {
     border-radius: 100%;
     margin-left: 2em;
     margin-right: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+
+}
+
+h3 {
+    font-size: 1em;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    font-size: 135%;
+    color: rgb(100, 100, 100);
     
 
 }
+
+#why-programming h3 {
+    position: relative;
+    bottom: 8%;
+} 
 
 /* #header-shapes {
     display: flex;
@@ -61,7 +79,7 @@ header {
     left: 25vw;
 } */
    
-h1, h2 {
+/* h1, h2 {
     z-index: 3;
     position: absolute;
     left: 53%;
@@ -82,7 +100,7 @@ h1 {
 h2 {
     top: 45%;
     font-size: 30px;
-}
+} */
 
 
 
