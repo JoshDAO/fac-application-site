@@ -17,7 +17,7 @@ header {
     bottom: 5vh;
     left: 45%;
     width: 55%;
-    height: 20vh;
+    height: 20%;
     display: flex;
     background-color: thistle;
     flex-direction: row;
@@ -25,9 +25,17 @@ header {
     align-items: center;
 }
 
+.individual-container {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .nav-icons {
     position: relative;
-    width: 18%;
+    width: 80%;
     background-color: white;
     border-radius: 100%;
     display: flex;
@@ -41,7 +49,7 @@ header {
 .nav-icons:hover {
     background-color: #659DBD;
     color: white;
-    width: 20%;
+    width: 100%;
 }
 
 h3 {
