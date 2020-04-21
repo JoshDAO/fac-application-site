@@ -12,7 +12,12 @@ const setNavHeight = () => {
 }
 
 setNavHeight();
-window.addEventListener("resize", setNavHeight)
+window.addEventListener("resize", setNavHeight);
+navIcons[0].addEventListener("mouseover", setNavHeight);
+navIcons[0].addEventListener("mouseout", setNavHeight);
+
+
+
 
 
 
