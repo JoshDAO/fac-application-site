@@ -15,7 +15,7 @@ setNavHeight();
 window.addEventListener("resize", setNavHeight);
 
 
-//navIcons make 
+//navIcons make big and blue on hover
 const aboutMe = document.getElementById('about-me');
 const whyProgramming = document.getElementById('why-programming');
 const whyFac = document.getElementById('why-fac');
