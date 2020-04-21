@@ -1,6 +1,27 @@
+// set navIcons height
+
+const navIcons = document.getElementsByClassName("nav-icons");
+const setNavHeight = () => {
+
+    let navWidth = navIcons[0].clientWidth;
+    navIcons[0].style.height = navWidth + "px";
+    console.log(navWidth)
+    for (let i = 0; i < navIcons.length; i++)  {
+        navIcons[i].style.height = navWidth + "px";
+    }
+}
+
+setNavHeight();
+window.addEventListener("resize", setNavHeight)
+
+
+
+
+//declare carousel variables
+
 const carouselSlide = document.querySelector(".my-slides");
 const images = document.querySelectorAll(".my-slides img");
-console.log(images)
+console.log(images) //testing
 
 // counter
 let counter = 1;
