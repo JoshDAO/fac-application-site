@@ -17,7 +17,7 @@ header {
     bottom: 5vh;
     left: 45%;
     width: 55%;
-    height: 20%;
+    height: 30vh;
     display: flex;
     background-color: thistle;
     flex-direction: row;
@@ -46,7 +46,7 @@ header {
 
 }
 
-.nav-icons:hover {
+#about-me:hover {
     background-color: #659DBD;
     color: white;
     width: 100%;

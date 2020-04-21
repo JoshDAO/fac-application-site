@@ -13,8 +13,19 @@ const setNavHeight = () => {
 
 setNavHeight();
 window.addEventListener("resize", setNavHeight);
-navIcons[0].addEventListener("mouseover", setNavHeight);
-navIcons[0].addEventListener("mouseout", setNavHeight);
+
+const aboutMe = document.getElementById('about-me');
+const whyProgramming = document.getElementById('why-programming');
+const whyFac = document.getElementById('why-fac');
+const contactMe = document.getElementById('contact-me');
+
+const navMouseOver = () => {
+    let aboutMeWidth = aboutMe.clientWidth;
+    aboutMe.style.height = aboutMeWidth + "px";
+}
+
+aboutMe.addEventListener("mouseover", navMouseOver);
+aboutMe.addEventListener("mouseout", navMouseOver);
 
 
 
