@@ -15,37 +15,37 @@ setNavHeight();
 window.addEventListener("resize", setNavHeight);
 
 
-//navIcons make big and blue on hover
-const aboutMe = document.getElementById('about-me');
-const whyProgramming = document.getElementById('why-programming');
-const whyFac = document.getElementById('why-fac');
-const contactMe = document.getElementById('contact-me');
+//navIcons make big and blue on hover                      //replaced with transform: scale in CSS
+// const aboutMe = document.getElementById('about-me');
+// const whyProgramming = document.getElementById('why-programming');
+// const whyFac = document.getElementById('why-fac');
+// const contactMe = document.getElementById('contact-me');
 
-const navMouseOverAboutMe = () => {
-    let aboutMeWidth = aboutMe.clientWidth;
-    aboutMe.style.height = aboutMeWidth + "px";
-}
-const navMouseOverWhyProgramming = () => {
-    let whyProgrammingWidth = whyProgramming.clientWidth;
-    whyProgramming.style.height = whyProgrammingWidth + "px";
-}
-const navMouseOverWhyFac = () => {
-    let whyFacWidth = whyFac.clientWidth;
-    whyFac.style.height = whyFacWidth + "px";
-}
-const navMouseOverContactMe = () => {
-    let contactMeWidth = contactMe.clientWidth;
-    contactMe.style.height = contactMeWidth + "px";
-}
+// const navMouseOverAboutMe = () => {
+//     let aboutMeWidth = aboutMe.clientWidth;
+//     aboutMe.style.height = aboutMeWidth + "px";
+// }
+// const navMouseOverWhyProgramming = () => {
+//     let whyProgrammingWidth = whyProgramming.clientWidth;
+//     whyProgramming.style.height = whyProgrammingWidth + "px";
+// }
+// const navMouseOverWhyFac = () => {
+//     let whyFacWidth = whyFac.clientWidth;
+//     whyFac.style.height = whyFacWidth + "px";
+// }
+// const navMouseOverContactMe = () => {
+//     let contactMeWidth = contactMe.clientWidth;
+//     contactMe.style.height = contactMeWidth + "px";
+// }
 
-aboutMe.addEventListener("mouseover", navMouseOverAboutMe);
-aboutMe.addEventListener("mouseout", navMouseOverAboutMe);
-whyProgramming.addEventListener("mouseover", navMouseOverWhyProgramming);
-whyProgramming.addEventListener("mouseout", navMouseOverWhyProgramming);
-whyFac.addEventListener("mouseover", navMouseOverWhyFac);
-whyFac.addEventListener("mouseout", navMouseOverWhyFac);
-contactMe.addEventListener("mouseover", navMouseOverContactMe);
-contactMe.addEventListener("mouseout", navMouseOverContactMe);
+// aboutMe.addEventListener("mouseover", navMouseOverAboutMe);
+// aboutMe.addEventListener("mouseout", navMouseOverAboutMe);
+// whyProgramming.addEventListener("mouseover", navMouseOverWhyProgramming);
+// whyProgramming.addEventListener("mouseout", navMouseOverWhyProgramming);
+// whyFac.addEventListener("mouseover", navMouseOverWhyFac);
+// whyFac.addEventListener("mouseout", navMouseOverWhyFac);
+// contactMe.addEventListener("mouseover", navMouseOverContactMe);
+// contactMe.addEventListener("mouseout", navMouseOverContactMe);
 
 
 
@@ -100,7 +100,7 @@ const playPause = () => {
     if (button.innerText == "PLAY") {
         loopVar = setInterval(transitionSlideForward, 3000);  // reassign loopVar to initial value when "Play" is pressed.
     } else {
-        clearInterval(loopVar);                          // clear loopVar interval when "Pause" is pressed
+        clearInterval(loopVar);        // clear loopVar interval when "Pause" is pressed
     }
 }
 
