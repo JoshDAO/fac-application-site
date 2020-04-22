@@ -217,18 +217,18 @@ h3 {
     align-items: center;
 }
 
-.section .intro-main .self-text {
+.section .self-text {
     flex-basis: 50%;
     height: fit-content;
 }
-.section .intro-main .carousel-area {
+.section .carousel-area {
     flex-basis: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.section .intro-main .carousel-area .carousel-container{
+.section  .carousel-area .carousel-container{
     margin: auto;
     height: 360px;
     width: 540px;
@@ -237,13 +237,13 @@ h3 {
     
 }
 
-.intro-main .carousel-area .carousel-container .my-slides {
+.carousel-area .carousel-container .my-slides {
     height: 100%;
     width: 540px;
     display: flex;
 }
 
-.intro-main .carousel-area .carousel-container .my-slides img {
+.carousel-area .carousel-container .my-slides img {
     height: 100%;
     max-width: 100%;
     
