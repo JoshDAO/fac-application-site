@@ -14,10 +14,10 @@ header {
 .nav-icons-container {
 
     position: relative;
-    bottom: 5vh;
+    padding-bottom: 5%;
     left: 45%;
     width: 55%;
-    height: 30vh;
+    height: 30%;
     display: flex;
     background-color:transparent;
     flex-direction: row;
@@ -46,7 +46,7 @@ header {
 
 }
 
-#about-me:hover, #why-programming:hover, #why-fac:hover, #contact-me:hover {
+#about-me-icon:hover, #why-programming-icon:hover, #why-fac-icon:hover, #contact-me-icon:hover {
     background-color: #659DBD;
     color: white;
     transform: scale(1.2);
@@ -76,10 +76,10 @@ header {
     font-size: 1.4em;
 }
 
-#why-programming h3 {
+/* #why-programming h3 {
     position: relative;
     bottom: 8%;
-} 
+}  */
 
 /* #header-shapes {
     display: flex;
@@ -144,20 +144,22 @@ h2 {
 main {
     width: 100%;
     height: 5000px;
-    background-image: url('images/background-stars.pg');
-    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.intro {
+.section {
     background-color: white;
-    height: 500px;
+    height: 100vh;
+    width: 80vw;
     display: flex;
     font-family: sans-serif;
     flex-direction: column;
 }
-.intro .intro-header {
+.section .section-header {
     background-color: wheat;
-    height: 50px;
+    height: 10vh;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -165,12 +167,26 @@ main {
 
 }
 
-.intro .intro-header .about-me {
-    height: 50px;
+.section .section-header .section-title {
+    height: 100%;
     flex-basis: auto;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
 }
 
-.intro .intro-header .external-links {
+h3 {
+    margin:0px;
+    font-weight: 300;
+    vertical-align: middle;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    font-size: 3em;
+    color: #659DBD;
+
+}
+
+.section .section-header .external-links {
     background-color: rosybrown;
     height: 50px;
     flex-basis: 50em;
@@ -180,25 +196,25 @@ main {
 
 }
 
-.intro .intro-main {
+.section .intro-main {
     background-color: thistle;
     height: 450px;
     display: flex;
     align-items: center;
 }
 
-.intro .intro-main .self-text {
+.section .intro-main .self-text {
     flex-basis: 50%;
     height: fit-content;
 }
-.intro .intro-main .carousel-area {
+.section .intro-main .carousel-area {
     flex-basis: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.intro .intro-main .carousel-area .carousel-container{
+.section .intro-main .carousel-area .carousel-container{
     margin: auto;
     height: 360px;
     width: 540px;
