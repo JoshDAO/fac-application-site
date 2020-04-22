@@ -150,16 +150,19 @@ main {
 }
 
 .section {
-    background-color: white;
+    background-color:#eee2dc;
+    background-color: rgba(238, 226, 220, 0.7);
     height: 100vh;
-    width: 80vw;
+    width: 85vw;
     display: flex;
     font-family: sans-serif;
     flex-direction: column;
+    border: 3px solid #123C69;
+    padding: 3%;
 }
 .section .section-header {
-    background-color: wheat;
-    height: 10vh;
+    /* background-color: wheat; */
+    height: 7vh;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -183,11 +186,12 @@ h3 {
     padding: 0;
     font-size: 3em;
     color: #659DBD;
+    padding-left: 0.3em;
 
 }
 
 .section .section-header .external-links {
-    background-color: rosybrown;
+    /* background-color: rosybrown; */
     height: 50px;
     flex-basis: 50em;
     display: flex;
@@ -197,7 +201,7 @@ h3 {
 }
 
 .section .intro-main {
-    background-color: thistle;
+    /* background-color: thistle; */
     height: 450px;
     display: flex;
     align-items: center;
