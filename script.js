@@ -16,10 +16,7 @@ window.addEventListener("resize", setNavHeight);
 
 
 //navIcons make big and blue on hover                      //replaced with transform: scale in CSS
-// const aboutMe = document.getElementById('about-me');
-// const whyProgramming = document.getElementById('why-programming');
-// const whyFac = document.getElementById('why-fac');
-// const contactMe = document.getElementById('contact-me');
+
 
 // const navMouseOverAboutMe = () => {
 //     let aboutMeWidth = aboutMe.clientWidth;
@@ -47,7 +44,18 @@ window.addEventListener("resize", setNavHeight);
 // contactMe.addEventListener("mouseover", navMouseOverContactMe);
 // contactMe.addEventListener("mouseout", navMouseOverContactMe);
 
+const aboutMeIcon = document.getElementById('about-me-icon');
+const whyProgrammingIcon = document.getElementById('why-programming-icon');
+const whyFacIcon = document.getElementById('why-fac-icon');
+const contactMeIcon = document.getElementById('contact-me-icon');
 
+const toggleAboutMe = () => {
+    const aboutMe = document.getElementById("about-me");
+    console.log(aboutMe);
+    aboutMe.style.display = (aboutMe.style.display === "none") ? "flex" : "none";
+}
+
+aboutMeIcon.addEventListener("click", toggleAboutMe);
 
 
 

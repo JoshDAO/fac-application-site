@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -149,7 +153,7 @@ h2 {
 
 
 
-main {
+#about-me {
     width: 85vw;
     height: 5000px;
     display: flex;
@@ -158,12 +162,12 @@ main {
 }
 
 .section {
-    background-color: rgba(230, 230, 230, 0.7);
-    background-color:#eee2dc;
-    height: 100vh;
+
+    background-color: rgba(200, 200, 200, 0.4);
+    /* height: 150vh; */
     width: 100%;
     display: flex;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     flex-direction: column;
     border: 3px solid #659DBD;
     border-radius: 15px;
@@ -189,7 +193,7 @@ main {
 }
 
 .section p {
-    font-size: 1.7em;
+    font-size: 1.3em;
     color: black;
 }
 
@@ -200,7 +204,7 @@ h3 {
     font-family: 'Open Sans', sans-serif;
     padding: 0;
     font-size: 3em;
-    color:#ac3b61;
+    color:#659DBD;
     padding-left: 0.3em;
 
 }
@@ -224,13 +228,14 @@ h3 {
 }
 
 .section .self-text {
-    flex-basis: 50%;
+    flex-basis: auto;
     height: fit-content;
 }
 .section .carousel-area {
-    flex-basis: 50%;
-    height: 100%;
-    display: flex;
+    margin: 0% 5%;
+    /* flex-basis: 50%;
+    height: 100%; */
+    /* display: flex; */
     justify-content: center;
     align-items: center;
 }
