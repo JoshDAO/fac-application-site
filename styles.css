@@ -153,12 +153,16 @@ h2 {
 
 
 
-#about-me {
+#about-me, #why-programming {
     width: 85vw;
     height: 5000px;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
+}
+
+#why-programming {
+    display: flex;
 }
 
 .section {
