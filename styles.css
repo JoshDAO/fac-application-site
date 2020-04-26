@@ -57,6 +57,9 @@ header {
     cursor: pointer;
 
 }
+.nav-icons:link {
+    text-decoration: none;
+}
 
 #about-me-icon:hover, #why-programming-icon:hover, #why-fac-icon:hover, #contact-me-icon:hover {
     background-color: #659DBD;
