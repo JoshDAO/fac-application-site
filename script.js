@@ -97,18 +97,18 @@ console.log(images) //testing
 
 // counter
 let counter = 1;
-aboutMe.style.display = "flex"; //show images to take width for a split second
+aboutMe.style.display = "flex"; //show section to take width for a split second
 const scrollWidth = images[1].clientWidth;
-aboutMe.style.display = "none";
+aboutMe.style.display = "none"; // hide section again
 carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
-console.log(scrollWidth);
+
 
 //transition slide functions
 const transitionSlideForward = () => { 
     carouselSlide.style.transition = "transform 0.6s ease-in-out";
     counter++;
     carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
-    console.log(counter);
+   
 
 }
 
