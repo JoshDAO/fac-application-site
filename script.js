@@ -49,23 +49,35 @@ const whyProgrammingIcon = document.getElementById('why-programming-icon');
 const whyFacIcon = document.getElementById('why-fac-icon');
 const contactMeIcon = document.getElementById('contact-me-icon');
 
+const aboutMe = document.getElementById("about-me");
+const whyProgramming = document.getElementById("why-programming")
+const whyFac = document.getElementById("why-fac");
+const contactMe = document.getElementById("contact-me");
+
 //navIcon show/hide sections
 
 const toggleAboutMe = () => {
-    const aboutMe = document.getElementById("about-me");
-    console.log(aboutMe.style.display);
+    whyProgramming.style.display = "none";
+    whyFac.style.display = "none";
+    contactMe.style.display = "none";
     aboutMe.style.display = (aboutMe.style.display === "flex") ? "none" : "flex";
 }
-const toggleWhyProgramming = () => {
-    const whyProgramming = document.getElementById("why-programming");
+const toggleWhyProgramming = () => {;
+    aboutMe.style.display = "none";
+    whyFac.style.display = "none";
+    contactMe.style.display = "none";
     whyProgramming.style.display = (whyProgramming.style.display === "flex") ? "none" : "flex";
 }
 const toggleWhyFac = () => {
-    const whyFac = document.getElementById("why-fac");
+    aboutMe.style.display = "none";
+    whyProgramming.style.display = "none";
+    contactMe.style.display = "none";
     whyFac.style.display = (whyFac.style.display === "flex") ? "none" : "flex";
 }
-const toggleContactMe = () => {
-    const contactMe = document.getElementById("contact-me");
+const toggleContactMe = () => {  
+    aboutMe.style.display = "none";
+    whyProgramming.style.display = "none";
+    whyFac.style.display = "none";
     contactMe.style.display = (contactMe.style.display === "flex") ? "none" : "flex";
 }
 
