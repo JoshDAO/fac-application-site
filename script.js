@@ -49,13 +49,30 @@ const whyProgrammingIcon = document.getElementById('why-programming-icon');
 const whyFacIcon = document.getElementById('why-fac-icon');
 const contactMeIcon = document.getElementById('contact-me-icon');
 
+//navIcon show/hide sections
+
 const toggleAboutMe = () => {
     const aboutMe = document.getElementById("about-me");
     console.log(aboutMe.style.display);
     aboutMe.style.display = (aboutMe.style.display === "flex") ? "none" : "flex";
 }
+const toggleWhyProgramming = () => {
+    const whyProgramming = document.getElementById("why-programming");
+    whyProgramming.style.display = (whyProgramming.style.display === "flex") ? "none" : "flex";
+}
+const toggleWhyFac = () => {
+    const whyFac = document.getElementById("why-fac");
+    whyFac.style.display = (whyFac.style.display === "flex") ? "none" : "flex";
+}
+const toggleContactMe = () => {
+    const contactMe = document.getElementById("contact-me");
+    contactMe.style.display = (contactMe.style.display === "flex") ? "none" : "flex";
+}
 
 aboutMeIcon.addEventListener("click", toggleAboutMe);
+whyProgrammingIcon.addEventListener("click", toggleWhyProgramming);
+whyFacIcon.addEventListener("click", toggleWhyFac);
+contactMeIcon.addEventListener("click", toggleContactMe);
 
 
 
