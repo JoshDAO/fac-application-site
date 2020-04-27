@@ -51,8 +51,8 @@ const contactMeIcon = document.getElementById('contact-me-icon');
 
 const toggleAboutMe = () => {
     const aboutMe = document.getElementById("about-me");
-    console.log(aboutMe);
-    aboutMe.style.display = (aboutMe.style.display === "none") ? "flex" : "none";
+    console.log(aboutMe.style.display);
+    aboutMe.style.display = (aboutMe.style.display === "flex") ? "none" : "flex";
 }
 
 aboutMeIcon.addEventListener("click", toggleAboutMe);
