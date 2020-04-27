@@ -5,7 +5,6 @@ const setNavHeight = () => {
 
     let navWidth = navIcons[0].clientWidth;
     navIcons[0].style.height = navWidth + "px";
-    console.log(navWidth)
     for (let i = 0; i < navIcons.length; i++)  {
         navIcons[i].style.height = navWidth + "px";
     }
@@ -98,14 +97,18 @@ console.log(images) //testing
 
 // counter
 let counter = 1;
+aboutMe.style.display = "flex"; //show images to take width for a split second
 const scrollWidth = images[1].clientWidth;
+aboutMe.style.display = "none";
 carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
+console.log(scrollWidth);
 
 //transition slide functions
 const transitionSlideForward = () => { 
     carouselSlide.style.transition = "transform 0.6s ease-in-out";
     counter++;
     carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
+    console.log(counter);
 
 }
 
