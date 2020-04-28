@@ -246,6 +246,14 @@ h3 {
    max-width: 100%;
 }
 
+@media only screen and (max-width: 600px) {
+    .external-links {
+      height: 3vh;
+      justify-content: space-evenly;
+    }
+
+  }
+
 .section .intro-main {
     /* background-color: thistle; */
     height: 450px;
