@@ -188,14 +188,25 @@ nextBtn.addEventListener("click", forwardResetTimer);
 prevBtn.addEventListener("click", backwardResetTimer);
 
 
+// add keyboard functionality to carousel
+
+const keyboardNav = (e) => {
+    if (e.keyCode == "37") { // if left arrow key
+        backwardResetTimer(); // do the same thing as hitting prev button
+    } else if (e.keyCode == "39") { // if right arrow key
+        forwardResetTimer(); // same as forward button
+    }
+}
+
+window.addEventListener('keydown', keyboardNav); //listens for arrow key presses and invokes function
 
 // Clone image loop. Add event listener for end of transition
 
-carouselSlide.addEventListener("transitionend", () => { // 
-    if (images[counter].id == "last-clone") {
-        carouselSlide.style.transition = 'none';
-        counter = images.length - 2;
-        carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
+carouselSlide.addEventListener("transitionend", () => { // waits until transition is complete before doing anything
+    if (images[counter].id == "last-clone") {  // if we are on our clone
+        carouselSlide.style.transition = 'none'; // remove transition effects 
+        counter = images.length - 2; 
+        carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)"; // and jump immediately to picture clone was cloned from
     }
     if (images[counter].id == "first-clone") {
         carouselSlide.style.transition = 'none';
