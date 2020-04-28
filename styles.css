@@ -12,11 +12,11 @@ body {
 
 header {
     width: 100%;
-    padding-top: 35%;
+    padding-top: 31.5%;
     background-image: url('images/front-cover-charmander.jpg.png');
-    background-color: gray;
+    background-color: rgb(200, 200, 200);
 
-    background-size: 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     display: block;
     
@@ -85,15 +85,15 @@ header {
     font-family: 'Permanent Marker', cursive;
     font-weight: 300;
     letter-spacing: 0.1em;
-    font-size: 1.4em;
+    font-size: 1.15vw;
     color: rgb(100, 100, 100);
+    ;
     
 
 }
 
 .nav-icons p:hover {
     color: white;
-    font-size: 1.4em;
 }
 
 /* #why-programming h3 {
