@@ -133,7 +133,7 @@ const changeText = () => {
 
 //PlayPause button main function
 
-let loopVar = setInterval(transitionSlideForward, 3000); // will play when page loads by default
+let loopVar; // will play when page loads by default
 
 
 const playPause = () => {
@@ -143,6 +143,20 @@ const playPause = () => {
         clearInterval(loopVar);        // clear loopVar interval when "Pause" is pressed
     }
 }
+
+//stop carousel if 'About Me' is hidden
+
+const playOnDisplay = () => {
+    if(aboutMe.style.display !== "flex") {
+        clearInterval(loopVar);
+    } else {
+        loopVar = setInterval(transitionSlideForward, 3000);
+    }
+}
+
+document.getElementById("nav-icons-container").addEventListener("click", playOnDisplay)
+
+
 
 //PlayPause button invoke functions
 button.addEventListener("click", playPause);
