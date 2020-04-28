@@ -147,7 +147,7 @@ const playPause = () => {
 //stop carousel if 'About Me' is hidden
 
 const playOnDisplay = () => {
-    if(aboutMe.style.display !== "flex") {
+    if(aboutMe.style.display !== "flex" || button.innerText == "PLAY") {
         clearInterval(loopVar);
     } else {
         loopVar = setInterval(transitionSlideForward, 3000);
