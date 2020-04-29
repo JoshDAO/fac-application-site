@@ -167,22 +167,32 @@ button.addEventListener("click", changeText);
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 
+let myVar = true; // this is used to set the prev/next button time outs.
+
 const forwardResetTimer = () => { // function to slide forward and reset auto loop
-    transitionSlideForward();
+    if (myVar === true) {
+        transitionSlideForward();
+        myVar = false;
+        setTimeout(function(){ myVar = true }, 600); // disables button for 600ms to ensure transition is completed before next transition.
+    }
     if (button.innerText == "PAUSE"){
         clearInterval(loopVar);
         loopVar = setInterval(transitionSlideForward, 3000);
+
     }
 }
 
 const backwardResetTimer = () => {//function to slide backward and reset auto loop
-    transitionSlideBackward();
+    if (myVar === true) {
+        transitionSlideBackward();
+        myVar = false;
+        setTimeout(function(){ myVar = true }, 600);
+    }
     if (button.innerText == "PAUSE"){
         clearInterval(loopVar);
         loopVar = setInterval(transitionSlideForward, 3000);
         
     }
-    console.log(counter);
 }
 nextBtn.addEventListener("click", forwardResetTimer);
 prevBtn.addEventListener("click", backwardResetTimer);
