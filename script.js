@@ -105,6 +105,7 @@ carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
 
 //transition slide functions
 const transitionSlideForward = () => { 
+    if (document.hidden) return;
     carouselSlide.style.transition = "transform 0.6s ease-in-out";
     counter++;
     carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
@@ -113,6 +114,7 @@ const transitionSlideForward = () => {
 }
 
 const transitionSlideBackward= () => { 
+    if (document.hidden) return;
     carouselSlide.style.transition = "transform 0.6s ease-in-out";
     counter--;
     carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
@@ -173,7 +175,7 @@ const forwardResetTimer = () => { // function to slide forward and reset auto lo
     if (myVar === true) {
         transitionSlideForward();
         myVar = false;
-        setTimeout(function(){ myVar = true }, 600); // disables button for 600ms to ensure transition is completed before next transition.
+        setTimeout(function(){ myVar = true }, 650); // disables button for 600ms to ensure transition is completed before next transition.
     }
     if (button.innerText == "PAUSE"){
         clearInterval(loopVar);
@@ -186,7 +188,7 @@ const backwardResetTimer = () => {//function to slide backward and reset auto lo
     if (myVar === true) {
         transitionSlideBackward();
         myVar = false;
-        setTimeout(function(){ myVar = true }, 600);
+        setTimeout(function(){ myVar = true }, 650);
     }
     if (button.innerText == "PAUSE"){
         clearInterval(loopVar);
