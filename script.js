@@ -1,17 +1,18 @@
 // set navIcons height
 
 const navIcons = document.getElementsByClassName("nav-icons");
-const setNavHeight = () => {
+const setNavHeight = () => {  // dynamically resizes navIcons on browser resize
 
     let navWidth = navIcons[0].clientWidth;
     navIcons[0].style.height = navWidth + "px";
-    for (let i = 0; i < navIcons.length; i++)  {
-        navIcons[i].style.height = navWidth + "px";
+    for (let i = 0; i < navIcons.length; i++)  { 
+        navIcons[i].style.height = navWidth + "px"; // always circular
     }
 }
 
 setNavHeight();
 window.addEventListener("resize", setNavHeight);
+
 
 
 //navIcons make big and blue on hover                      //replaced with transform: scale in CSS
@@ -97,10 +98,19 @@ console.log(images) //testing
 
 // counter
 let counter = 1;
-aboutMe.style.display = "flex"; //show section to take width for a split second
-const scrollWidth = images[1].clientWidth;
-aboutMe.style.display = "none"; // hide section again
-carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
+let scrollWidth;
+window.addEventListener("load", () => {
+        aboutMe.style.display = "flex"; //show section to take width for a split second
+
+        scrollWidth = images[1].clientWidth;
+        aboutMe.style.display = "none"; // hide section again
+        carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
+});
+
+window.addEventListener('resize', () => {
+        scrollWidth = images[0].clientWidth
+        carouselSlide.style.transform = 'translateX(' + (-scrollWidth * counter) + 'px)';
+});
 
 
 //transition slide functions
@@ -171,7 +181,7 @@ const nextBtn = document.getElementById("nextBtn");
 
 let myVar = true; // this is used to set the prev/next button time outs.
 
-const forwardResetTimer = () => { // function to slide forward and reset auto loop
+const forwardResetTimer = () => { // function to slide forward and reset auto loop.
     if (myVar === true) {
         transitionSlideForward();
         myVar = false;
