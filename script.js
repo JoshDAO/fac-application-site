@@ -18,31 +18,31 @@ window.addEventListener("resize", setNavHeight);
 //navIcons make big and blue on hover                      //replaced with transform: scale in CSS
 
 
-// const navMouseOverAboutMe = () => {
-//     let aboutMeWidth = aboutMe.clientWidth;
-//     aboutMe.style.height = aboutMeWidth + "px";
-// }
-// const navMouseOverWhyProgramming = () => {
-//     let whyProgrammingWidth = whyProgramming.clientWidth;
-//     whyProgramming.style.height = whyProgrammingWidth + "px";
-// }
-// const navMouseOverWhyFac = () => {
-//     let whyFacWidth = whyFac.clientWidth;
-//     whyFac.style.height = whyFacWidth + "px";
-// }
-// const navMouseOverContactMe = () => {
-//     let contactMeWidth = contactMe.clientWidth;
-//     contactMe.style.height = contactMeWidth + "px";
-// }
+/* const navMouseOverAboutMe = () => {
+    let aboutMeWidth = aboutMe.clientWidth;
+    aboutMe.style.height = aboutMeWidth + "px";
+}
+const navMouseOverWhyProgramming = () => {
+    let whyProgrammingWidth = whyProgramming.clientWidth;
+    whyProgramming.style.height = whyProgrammingWidth + "px";
+}
+const navMouseOverWhyFac = () => {
+    let whyFacWidth = whyFac.clientWidth;
+    whyFac.style.height = whyFacWidth + "px";
+}
+const navMouseOverContactMe = () => {
+    let contactMeWidth = contactMe.clientWidth;
+    contactMe.style.height = contactMeWidth + "px";
+}
 
-// aboutMe.addEventListener("mouseover", navMouseOverAboutMe);
-// aboutMe.addEventListener("mouseout", navMouseOverAboutMe);
-// whyProgramming.addEventListener("mouseover", navMouseOverWhyProgramming);
-// whyProgramming.addEventListener("mouseout", navMouseOverWhyProgramming);
-// whyFac.addEventListener("mouseover", navMouseOverWhyFac);
-// whyFac.addEventListener("mouseout", navMouseOverWhyFac);
-// contactMe.addEventListener("mouseover", navMouseOverContactMe);
-// contactMe.addEventListener("mouseout", navMouseOverContactMe);
+aboutMe.addEventListener("mouseover", navMouseOverAboutMe);
+aboutMe.addEventListener("mouseout", navMouseOverAboutMe);
+whyProgramming.addEventListener("mouseover", navMouseOverWhyProgramming);
+whyProgramming.addEventListener("mouseout", navMouseOverWhyProgramming);
+whyFac.addEventListener("mouseover", navMouseOverWhyFac);
+whyFac.addEventListener("mouseout", navMouseOverWhyFac);
+contactMe.addEventListener("mouseover", navMouseOverContactMe);
+contactMe.addEventListener("mouseout", navMouseOverContactMe); */
 
 const aboutMeIcon = document.getElementById('about-me-icon');
 const whyProgrammingIcon = document.getElementById('why-programming-icon');
@@ -100,22 +100,21 @@ console.log(images) //testing
 let counter = 1;
 let scrollWidth;
 window.addEventListener("load", () => {
-        aboutMe.style.display = "flex"; //show section to take width for a split second
-
+        aboutMe.style.display = "flex";                             //show section to take width for a split second
         scrollWidth = images[1].clientWidth;
-        aboutMe.style.display = "none"; // hide section again
-        carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
+        aboutMe.style.display = "none";                             // hide section again
+        carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)"; //translate to first 'real' image in album
 });
 
 window.addEventListener('resize', () => {
-        scrollWidth = images[0].clientWidth
-        carouselSlide.style.transform = 'translateX(' + (-scrollWidth * counter) + 'px)';
+        scrollWidth = images[0].clientWidth                         // adjust width varable accordingly
+        carouselSlide.style.transform = 'translateX(' + (-scrollWidth * counter) + 'px)'; // translate the correct distance to whichever image counter is up to.
 });
 
 
 //transition slide functions
 const transitionSlideForward = () => { 
-    if (document.hidden) return;
+    if (document.hidden) return;  // disables the function if user is on another tab. Stops loop bug with transitionEnd event listener
     carouselSlide.style.transition = "transform 0.6s ease-in-out";
     counter++;
     carouselSlide.style.transform = "translateX(" + -scrollWidth * counter + "px)";
@@ -135,12 +134,16 @@ const transitionSlideBackward= () => {
 
 const button = document.getElementById('playpause');
 
+// const changeText = () => {
+//     if (button.innerText === "PLAY") {
+//         button.innerText = "PAUSE";
+//     } else {
+//         button.innerText = "PLAY";
+//     }
+// }
+
 const changeText = () => {
-    if (button.innerText === "PLAY") {
-        button.innerText = "PAUSE";
-    } else {
-        button.innerText = "PLAY";
-    }
+    button.innerText = (button.innerText === "PLAY" ? "PAUSE" : "PLAY");  //use the ternary operator!
 }
 
 //PlayPause button main function
